@@ -20,4 +20,15 @@ router.get("/", function (req, res, next) {
   }
 });
 
+router.post("/", function (req, res, next) {
+  const candidate = {
+    id: candidatesData.length + 1,
+    name: "Tien",
+    email: "Tien@gmail.com",
+    country: "Vietnam",
+  };
+  candidate.push(candidatesData);
+  res.send(candidate);
+});
+
 module.exports = router;
