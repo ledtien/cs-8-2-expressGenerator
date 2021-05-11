@@ -31,4 +31,11 @@ router.post("/", function (req, res, next) {
   res.send(candidate);
 });
 
+router.get("/:id", function (req, res, next) {
+  const candidate = candidatesData.filter(
+    (c) => c.id === parseInt(req.params.id)
+  );
+
+  res.json(candidate);
+});
 module.exports = router;

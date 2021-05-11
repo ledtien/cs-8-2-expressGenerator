@@ -8,7 +8,6 @@ require("dotenv").config();
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var candidatesRouter = require("./routes/candidates");
-var candidateIdRouter = require("./routes/candidateId");
 
 var app = express();
 
@@ -21,6 +20,5 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/candidates", candidatesRouter);
-app.use("/candidates/:id", candidateIdRouter);
 
 module.exports = app;
